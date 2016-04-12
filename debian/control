@@ -1,0 +1,13 @@
+Source: python-beaver
+Section: python
+Priority: extra
+Maintainer: Jose Diaz-Gonzalez <email@josediazgonzalez.com>
+Build-Depends: debhelper (>= 9), python, dh-virtualenv
+Standards-Version: 3.9.5
+
+Package: python-beaver
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Homepage: http://github.com/python-beaver/python-beaver
+Description: Python log forwarder
+    Python daemon that munches on logs and sends their contents to logstash

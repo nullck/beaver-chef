@@ -1,0 +1,18 @@
+sudo: false
+language: python
+branches:
+  except:
+    - gh-pages
+python:
+  - "2.6"
+  - "2.7"
+addons:
+  apt:
+    packages:
+    - build-essential
+    - libzmq-dev
+install: ./install-dependencies.sh
+script:
+  nosetests --with-coverage --cover-package=beaver
+after_success:
+  coveralls
